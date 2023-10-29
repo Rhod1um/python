@@ -1,0 +1,18 @@
+<built-in method now of type object at 0x5600e29cee20> 
+<built-in method now of type object at 0x5600e29cee20> 
+<built-in method now of type object at 0x5600e29cee20> 
+2023-09-28 10:28:51.157762 
+2023-09-28 10:29:28.591181 
+2023-09-28 10:30:53.927023 
+2023-09-28 10:31:24.025180 
+2023-09-28 10:32:48.910762 
+2023-09-28 10:34:18.297166 
+2023-09-28 10:40:54.518846 
+ (34, 23) 
+2023-09-28 10:41:15.128147 (34, 23) 
+timstamp: 2023-09-28 10:42:12.735610, numbers to be added: (34, 23) 
+timstamp: 2023-09-28 10:44:31.576167, numbers to be added: (34, 23), result: 57 
+timstamp: 2023-09-28 10:45:55.814112, numbers to be added: (34, 23), result: 57 
+timstamp: 2023-09-28 10:45:55.817299, numbers to be added: ('test printer',), result: test printer 
+timstamp: 2023-09-28 10:56:05.361891, numbers to be added: (34, 23), result: 57 
+timstamp: 2023-09-28 10:56:05.364605, numbers to be added: ('test printer',), result: test printer 

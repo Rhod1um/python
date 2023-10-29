@@ -1,0 +1,118 @@
+#!/usr/bin/python3
+
+class Car:
+	color=""
+	brand=""
+
+#object:
+
+audi = Car
+audi.color="blue"
+audi.brand="audi"
+
+print(audi.color)
+#print(audi.repr())
+
+print("Audi is {}".format(audi.color) + " and brand is ")
+
+#__ dobble underscore er self initializing
+#bliver invoked af sig selv, 
+#er constructor? constructor er self invoking function
+class Person:
+	#class attributes, som static
+	person_ethnicity = "Asian" #alle Person her denne
+	#instance/object attributes
+	def __init__(self, name, age, cpr):
+		self.name = name
+		self.age = age
+		self.cpr = cpr
+	def about(self):
+		print("Person hedder {}".format(self.name))
+	def __repr__(self): #manuel toString
+		return "name: {}, age: {}, cpr: {}".format(self.name, self.age, self.cpr)
+
+person1 = Person("Simone", 35, "101010110")
+print(person1.about)
+print(person1) #når der er lavet en toString __repr__
+# eller __str__  så kan man bare printe person1, ikke .str
+# da __ jo gør at det er self invoking
+#str er for alle, repr er mere for developers, mere teknisk
+#__repr__ bruger fx timestamp og coordinates osv
+#str er for users
+
+#husk self som parameter i self invoking functions
+#det er self parameter der gør at man har direkte adgang
+#til attributterne
+
+print(person1.person_ethnicity)
+
+class Car2:
+	def __init__(self, brand, mileage):
+		self.brand=brand
+		self.mileage=mileage
+	def __str__(self):
+		return self.brand + " " + str(self.mileage)
+	def drive(self):
+		self.mileage=+1
+
+tesla = Car2("Tesla", 1000)
+polestar = Car2("Polestar", 2000)
+
+print(tesla)
+print(polestar)
+
+tesla.drive()
+print(tesla)
+tesla.drive()
+print(tesla)
+
+#docstrings er med tre """
+#puttes i klasser og metoder for at forklare hvad den gør
+#står for documenting string
+#det er en kommentar og kan være på flere linjer 
+
+#man kan printe help?
+#print(help(person1.about))
+
+#inheritance  PetDog, ParentnameChildname
+
+class Pet:
+	animal =""
+	def __init__(self, name, sound):
+		self.name=name
+		self.sound=sound
+	def speaks(self):
+		print("This is pet {}. It {}".format(self.name, self.sound))
+
+class PetDog(Pet):
+	animal="dog"
+
+class PetCat(Pet):
+	animal="cat"
+
+winnie = PetDog("winnie", "barks")
+anna = PetCat("anna", "meows")
+
+winnie.speaks()
+anna.speaks()
+
+class Person:
+	apples=0
+	ideas=0
+
+johanna = Person()
+johanna.apples=1
+johanna.ideas=1
+
+martin=Person()
+martin.apples=2
+martin.ideas=1
+
+def exchange_apples(johanna, martin):
+	temp_var = martin.apples
+	martin.apples = johanna.apples
+	johanna.apples = temp_var
+	return johanna.apples, martin.apples
+
+exchange_apples(johanna, martin)
+print("johanna has {} apples and Martin has {} apples".format(johanna.apples, martin.apples))

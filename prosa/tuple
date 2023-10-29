@@ -1,0 +1,28 @@
+#!/usr/bin/python3
+
+#creating a tuple using literal
+my_tuple=(1,2,3)
+
+print(type(my_tuple))
+
+#creating tuple using tuple()
+my_tuple2 = tuple()
+print(type(my_tuple))
+
+#second value in tuple is:
+print("second value in tuple is: ", my_tuple[1])
+
+#tuples are immutable, man kan ikke ændre indeks values senere
+
+my_tuple3 = 12,15,14,12
+
+for value in my_tuple3:
+	print(value)
+
+#man kan assigne flere variabler på en gang
+num1, num2, num3, num4 = my_tuple3
+
+#samme med list list=[1,2,3] er list literal
+#man kan også lave liste med list=list() funktion
+#man kan også bruge .split() string metode
+
